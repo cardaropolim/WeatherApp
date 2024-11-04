@@ -1,0 +1,51 @@
+
+
+
+
+
+{
+    "coord": {
+        "lon": 5.5,
+        "lat": 43.3333
+    },
+    "weather": [
+        {
+            "id": 804,
+            "main": "Clouds",
+            "description": "overcast clouds",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 294.66,
+        "feels_like": 294.51,
+        "temp_min": 291.96,
+        "temp_max": 295.19,
+        "pressure": 1024,
+        "humidity": 63,
+        "sea_level": 1024,
+        "grnd_level": 1005
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 1.7,
+        "deg": 225,
+        "gust": 0.57
+    },
+    "clouds": {
+        "all": 95
+    },
+    "dt": 1730209019,
+    "sys": {
+        "type": 2,
+        "id": 2006832,
+        "country": "FR",
+        "sunrise": 1730182170,
+        "sunset": 1730219622
+    },
+    "timezone": 3600,
+    "id": 2995468,
+    "name": "Marseille",
+    "cod": 200
+}
