@@ -15,12 +15,12 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                // Couleur de fond couvrant toute la vue
+
                 Color(hue: 0.564, saturation: 0.408, brightness: 0.858).edgesIgnoringSafeArea(.all)
                 
                 VStack {
                     if let location = locationManager.location {
-                        // Affichage des coordonnées et du nom de la ville si les données météo sont disponibles
+                        // Affichage des coordonnées et du nom de la ville 
                         if let weather = weather {
                             Text("Current location: \(weather.name) (\(location.longitude), \(location.latitude))")
                                 .padding()

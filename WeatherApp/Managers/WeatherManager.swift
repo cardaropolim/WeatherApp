@@ -9,7 +9,7 @@ import Foundation
 import CoreLocation
 class WeatherManager {
     func getCurrentWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async throws -> ResponseBody {
-        // Assurez-vous que la clé API est correcte et valide
+
         guard let url = URL(string:
             "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=bd81ca076208281d82c9bd22ea6db264") else {
                 fatalError("Invalid URL")
@@ -20,9 +20,9 @@ class WeatherManager {
         do {
             let (data, response) = try await URLSession.shared.data(for: urlRequest)
             
-            // Vérifiez la réponse HTTP
+
             if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
-                // Décodez les données
+
                 let decodedData = try JSONDecoder().decode(ResponseBody.self, from: data)
                 return decodedData
             } else if let httpResponse = response as? HTTPURLResponse {
@@ -38,7 +38,7 @@ class WeatherManager {
     }
 }
 
-// Model of the response body we get from calling the OpenWeather API
+
 struct ResponseBody: Decodable {
     var coord: CoordinatesResponse
     var weather: [WeatherResponse]
